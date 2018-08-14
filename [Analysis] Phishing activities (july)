@@ -1,0 +1,143 @@
+### 1. Introduction <hr>
+
+### 2. Scope of the Analysis <hr>
+
+The data were extracted from SteemSQL on 7 PM ( Philippine Time), August 12, 2018.  Multiple queries were used to collect all the necessary data to address the following objectives of the analysis:
+
+1. Present the current numbers and trend for the recovery requests between Jun to July 2018. Another set of data between January and July is used to have a comparison of trends between a shorter (2 months) and longer(7 months) timestamp. All the data are collected from **TxAccountRecovers** table from SteemSQL database. In addition, discover if there are new instances of phishing activities in steemit as reflected in the number of account recovery requests.
+
+2. Assess the performance of recovery accounts who are processing the recovery requests. Compare the previous percentage of recovery as to the current status. Identify all recovery accounts used in July for recovery processing. Also, evaluate the performance of @steem.
+
+3. Cluster the accounts requesting for recover based on the vesting share that this accounts are holding. Categorize each as plankton, minnows, dolphin, orca and whales according to the its vesting shares.  A special query joining **TxAccountRecovers** and **Accounts** was joined to extract the relevant data to used in the analysis.
+
+#### Limitation
+
+Hence the purpose of the analysis is to quantify the accounts lost to phishing activities in steemit, I only consider the accounts who have request for recovery. Users who does not have an official request for recovery within the specified time frame was not included in the analysis.
+
+
+### 3. Presentation and Result <hr>
+
+#### Overview <br>
+
+<div class="pull-right">https://ipfs.busy.org/ipfs/QmZ3NqSiZ6dah3fA839rZK1Vcj5LddLbEtjsEdD4vmfFs9</div> In July,  there are 165 recovery request was received and processed. About 90% of these request are fully recovered, leaving around 10% for unsuccessful requests. On average, about 5 recovery request was received on a daily basis. In addition, close to 5 recovery requests per day was recovered.
+<br><br>
+Previously, in June, a total of 62 recovery request was recorded. In comparison, July's requests for recovery is 266% as to June's 62 recovery requests.  It can be noted that a sudden increase in the account recovery was observed in July. It is over a 100 more request than in June. 
+<br><br>
+In a shorter timestamp (2 month), the number of recovery request is observed to have an increasing trends. We can note and highlight a 34 recovery request in July 29, 2018. According  on the projected trend using a 60 data sets, the number of recovery request shows a relative increase in the last two months.  This was highlighted by 34 recovery requests in July 29, 2018.  
+<br><br>
+
+#### Is this alarming? <hr>
+
+<div class="pull-left">https://ipfs.busy.org/ipfs/QmbAnc3221EnCZYVf28emLGhdzGaoHRhRraDnsCDsxSLm5<br>https://ipfs.busy.org/ipfs/QmRP8RpBxB8zEPGqWPTpSUEf1msqBr6ZNb6zZeEQ7hVPr9</div> In July, We can observed an increase in the number of recovery request which is about 266% as compared to June.  Frankly, the number would make us alarmed on a new sets of phishing activities.  However, if I looked into the January to July plot, it still shows a possible downward in the number of recovery request.
+<br><br>
+On average(7month), the number of request is about 7 recovery request per day. So, comparing the current average of 5 request per day, it is still below the all time average at 7 requests per day. The overall plot (7 month) still suggest a continuous decrease in the number of accounts requesting for recovery. 
+<br><br>
+Going back to the question, are we to be alarmed? We cannot disclosed that it is not alarming. But right now, the current situation wherein there are high numbers of recovery request is not within the level that we should be alarmed. Current average is 2 accounts lower from the all time average at 7 requests per day. This tell us that the number of recovery request is below the norms as compared to the previous months. 
+<br><br>
+It is true that the July data is a bit unusual. The numbers is high as compared to what was sustained in June. However, it is still early to put a verdict that there are new massive phishing attempts happening on steemit. The increasing trend is only shown within a shorter time frame. So, the trend may not be enough to gauge the current situation. Let see what happen in the next month. For now, we must carefully observe what is happening in terms of phishing attempts.
+<br><br>
+Does this high number of request to continue? The all time plot (7 month) suggest that the decreasing trend is expected to continue. As stated earlier, the current averages still below the 7 request per day. So, I think it will not continue to increase unless it is true that there will be new recorded massive attempts.
+
+#### Are recovery accounts still performing well?<hr>
+
+<div class="pull-right">https://ipfs.busy.org/ipfs/QmU4t5g36UAo74YGdJEFAm4zF6rzoax1GRQjGRTsqffhqG</div> Among 165 recovery request receives in July. Recovery account @steem had processed over 91% of all the recovery requests. Well, @steem have recovered the recovery requests by a 97% success rate. In contrast, other recovery accounts only manage to recovered 1 out of 14 request. It has a success rate about 7%.
+<br><br>
+ So, @steem still dominates the recovery processing of each accounts. Wherein, it still performing very well at a very high success percentage. This also shows that majority of the accounts in steemit have @steem as their recovery account. 
+<br><br>
+
+The current recovery percentage is quite high as compared to the previous report . Current success rate is about 90% which is 10% higher as compared to the last report ([mid year](https://steemit.com/utopian-io/@juecoree/lost-to-phishing-activities-mid-year-acount-recovery-report)). The number of accounts requesting for recovery was shown to have increased by 266% as compared in June. At the same time, we can observed an increase in the success rate for account recovery. So, even with a sudden increase in the number of request, recovery account was able to cope up as shown with its 90% successful recovery percentage.
+<br>
+#### Who are prone to phishing?<hr>
+
+<div class="pull-left">https://ipfs.busy.org/ipfs/QmdhJpwEPP6Yqfrs3emGXKF2TC7DYySn8Sjx2F2Y8uWeMY<br></div> Among all the accounts requesting recovery, 1036 authors where identified as plankton. This are users who have less than 1 million vests in their account. They contribute about 92.63% of the total users requesting for recovery over the last 7 months. It was followed by minnows who shares about 5.94% of the total authors requesting for recovery.  In addition, there are 10 dolphin and a whale who requested for recovery. 
+<br><br>
+So, who are more prone to phishing? Plankton and minnow are very susceptible with phishing activities. But, I think plankton are more prone than minnows. Usually, plankton are newbies of the steemit ecosystem. So, they are more prone to clicking phishing links from comments or posts. Especially, phishing links are promising some sort of help to gain and earn more rewards in steemit. This are tempting the plankton to explore. Majority of unsuccessful recovery are accounts from plankton. 
+<br><br>
+ If we talk about minnows, dolphine, orca and whales, they already have experience and knowledge on  the platform. I believe they can identify phishing links from post and comments. However, we can say that they are not prone to phishing. They may be susceptible to phishing but on a minimal degree. This can be observe from the lower number of accounts requesting recovery from this group. 
+<br><br>
+Based on what I have observed from the data, I can conclude that user who are new to steemit are more prone to phishing activities.  We can infer that the more knowledge, experience and engagement in steemit results to a lesser chance to be victimize by phishing links. Otherwise, phishing use brute force. 
+<br><br>
+
+#### Final Thoughts<hr>
+
+In the analysis, I have found out that there is an unusual increase in the current number of recovery request in steemit. We can account about 266% increase between June and July. Is this alarming? I I can not say that it isn't.  Right now, we should not be alarmed, just yet.
+
+The 7 month plot still projects a downward trend which we can not disregard it. It is reliable and established. While, the increasing trend only applies within the last two months.  I think we need to further investigate what will happen in August. However, we neeed not to disregard the unusual increase in recovery request in July. I think we should be very careful with accessing links on posts and comments. Hence, there is a possibility of new spamming phishing links on the platform.
+
+In terms of the recovery account performance, it is good to know that recovering your account from possible phishing has a 90% success rate. Recovery account, @steem, is performing well with 97% success in July. A good thing about the unusual increase is the increase in the effectiveness and reliability of account recovery. 
+
+In the analysis, I was able to explore who are prone to phishing in steemit. I have found out that plankton are the most vulnerable. The group have tallied a total of 1036 account for recover within the last 7 months. Most of the unrecoverable accounts are from this group. I have also observed that lesser accounts for recovery among dolphins, orca and whales. So, I think more experience, knowledge and engagement in steemit may help reduce your risk to phishing activities.
+
+#### Tools and Query<hr>
+
+All data are extracted from [SteemSQL](steemsql.com) database by importing it through Microsoft Excel. Additional data processing and transformation were all done in Microsoft Excel, including data statistics and visualization.
+
+Multiple query was used to extract all the necessary data to perform the analysis. Primarily, the query extract the data from both **TxAccountRecovers** and **Accounts** table in the steem database. The query used are presented below:
+
+[1] Initial query to extract all relevant data from **TxAccountRecovers**
+
+<code>SELECT*FROM TxAccountRecovers (NOLOCK)
+WHERE TxAccountRecovers.timestamp >= '2018/01/01' AND
+TxAccountRecovers.timestamp < '2018/08/01' </code>
+
+
+[2] Trimming down the initial query to a specific timestamp for July. The data which was imported to a pivot table in the Microsoft Excel.
+
+<code>SELECT*FROM TxAccountRecovers (NOLOCK)
+WHERE TxAccountRecovers.timestamp >= '2018/07/01' AND
+TxAccountRecovers.timestamp < '2018/08/01'</code>
+
+[3] Extracting the number of recovery request per day (7 months and 2 months timestamp)
+
+<code>SELECT	
+	MONTH(TxAccountRecovers.timestamp) AS [MONTH],
+	DAY(TxAccountRecovers.timestamp) AS [DAY],
+	COUNT(TxAccountRecovers.account_to_recover) AS [ACCOUNT_TO_RECOVER]
+FROM	
+	TxAccountRecovers (NOLOCK)
+WHERE	
+	YEAR(TxAccountRecovers.timestamp) = 2018 AND
+	TxAccountRecovers.timestamp >= '2018/01/01' AND
+	TxAccountRecovers.timestamp < '2018/08/01' AND
+	TxAccountRecovers.recovered = 'FALSE'
+GROUP BY	
+	MONTH(TxAccountRecovers.timestamp),
+	DAY(TxAccountRecovers.timestamp)</code>
+
+[4] Extracting the data from both  **TxAccountRecovers** and **Accounts** using INNER JOIN
+
+<code>SELECT	
+	TxAccountRecovers.account_to_recover,
+	TxAccountRecovers.recovery_account,
+	Accounts.vesting_shares,
+FROM	
+	TxAccountRecovers (NOLOCK)
+INNER JOIN Accounts(NOLOCK)
+	ON TxAccountRecovers.account_to_recover = Accounts.name
+WHERE	
+	YEAR(TxAccountRecovers.timestamp) = 2018 AND
+	TxAccountRecovers.timestamp >= '2018/01/01' AND
+	TxAccountRecovers.timestamp < '2018/08/01' AND
+	TxAccountRecovers.recovered = 'FALSE'
+GROUP BY	
+	TxAccountRecovers.account_to_recover,
+	TxAccountRecovers.recovery_account,
+	Accounts.vesting_shares</code>
+
+[5] Determining recovery account performance by extracting the data from **TxAccountRecovers** for number of request processed by recovery account
+
+<code>SELECT	
+	TxAccountRecovers.recovery_account,
+        COUNT(TxAccountRecovers.account_to_recover) AS [ACCOUNT_TO_RECOVER]
+FROM	
+	TxAccountRecovers (NOLOCK)
+INNER JOIN Accounts(NOLOCK)
+	ON TxAccountRecovers.account_to_recover = Accounts.name
+WHERE	
+	YEAR(TxAccountRecovers.timestamp) = 2018 AND
+	TxAccountRecovers.timestamp >= '2018/01/01' AND
+	TxAccountRecovers.timestamp < '2018/08/01' AND
+	TxAccountRecovers.recovered = 'FALSE'
+GROUP BY	
+	TxAccountRecovers.account_to_recover </code>
+
