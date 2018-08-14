@@ -1,5 +1,15 @@
 ### 1. Introduction <hr>
 
+![image.png](https://ipfs.busy.org/ipfs/QmNZqghWtyW9xaZcNxPLUBgoE1BQRXMCiQ29iFbEQKMmTy)
+
+In this analysis, I want to verify know who are more prone to phishing.  I decide to cluster the number of accounts who have request recovery within the last 7 months. I decide to cluster the accounts according to the vesting shares it holds. The categories are plankton, minnow, dolphin, orca and whales.
+
+Aside from knowing who are prone and vulnerable to phishing attacks, I will evaluate the number of recovery request in steemit. This is to verify if the steadily decreasing trend from my previous analysis was sustained. Also, I want to observed if there are an increase in the number of account recovery request. It will be used to verify if there are new and possible phishing activities in steemit.
+
+Lastly, this analysis includes looking into the performance of each recovery account whom processed at least one account within the specified timestamp, especially @steem. I like to see if the high percentage of success was sustained by each recovery accounts.
+
+##### Github Repository: [steemit/steem](https://github.com/steemit/steem)
+
 ### 2. Scope of the Analysis <hr>
 
 The data were extracted from SteemSQL on 7 PM ( Philippine Time), August 12, 2018.  Multiple queries were used to collect all the necessary data to address the following objectives of the analysis:
@@ -141,3 +151,4 @@ WHERE
 GROUP BY	
 	TxAccountRecovers.account_to_recover </code>
 
+#### Proof of Work: [juecoree/Steemit-Analysis](https://github.com/juecoree/Steemit-Analysis)
