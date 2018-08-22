@@ -1,4 +1,27 @@
-## Methodology ( Tools and Query) <hr>
+## 0. Introduction <hr>
+
+Benefactor Rewards was introduced in  [hardfork18](https://github.com/steemit/steem/issues/773). It splits a part of the authors rewards to a list of beneficiaries. Regardless of the author's reward setting, benefactors received the rewards in 100% steem power (SP). It was able to help and support developers to continue their steem-based application projects (Dapps).
+
+Once [hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20) is implemented on Tuesday, September 25, at 11:00am EST., benefactors will receive both steem power (SP) and liquid steem. It will be helpful for project owners and developer to sustain and maintain their projects.
+
+**Why do this analysis?**
+
+In this analysis, I want to explore the benefactor reward trends and distribution before the full implementation of [hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20). In addition, I will find out “proof of growth” of the steem blockchain by looking into the number of projects being reward through benefactor reward system.
+
+#### Github Repository: [steemit/steem](https://github.com/steemit/steem)
+
+## 1. Aim of the Analysis <hr>
+
+The goal of the analysis is to:
+
+1. Analyze the monthly benefactor rewards trend between April 2017 and July 2018;
+
+2. Perform a comparative analysis between the first 8 months and the last 8 months of benefactor rewards; and,
+
+3. Find out the most number of engagement and rewards among the beneficiaries.
+
+
+## 2. Methodology ( Tools and Query) <hr>
 
 I use [steemSQL wrapper](https://sql.steemhelpers.com/) to find out the data columns inside the **VOCommentBenefactorRewards** table from [steemSQL](www.steemsql.com). Having no experience with the **VOCommentBenefactorRewards** table, I initialize a query to look into data contents in each columns. 
 
@@ -39,3 +62,103 @@ GROUP BY
 VOCommentBenefactorRewards.benefactor</code>
 
 <br> After all the data were successfully gathered, visualization and plotting was done through Microsoft Excel.
+
+## 3. Data Presentation and Analysis <hr>
+
+### Rewards and User Engagement Shares of Benefactors<br>
+
+A total of 777,267,981 Vests was rewarded to 2,712 benefactors. [Dtube](https://d.tube/) received 34.16% of the rewards.  It was followed by [utopian.pay](https://steemit.com/@utopian.pay) and [esteemapp](https://steemit.com/@esteemapp) with 15.49% and 11.06% share of the reward. Most reward beneficiaries are projects, Dapps and delegators in the platform.
+
+![](https://cdn.steemitimages.com/DQmNySv8iADvNQ56oZ5AKabf7C54FfYtX5mAe41yJpC4X1Q/image.png)<center><sub>Figure 1:  Rewards distribution among different beneficiaries </sub></center>
+
+Popular mobile apps (e.g. [esteemapp](https://steemit.com/@esteemapp) and [steepshot](https://steemit.com/@steepshot)) gain more shares in the reward because it is easily accessible through user's smartphone.
+
+Contribution based Dapps also landed on top of the most rewarded beneficiaries such as [utopian-io](https://steemit.com/@utopian-io) and [steemhunt](https://steemhunt.com/).
+
+Among delegators, @freedom recieved about 2.21% of the reward. Other delegators such as @misterdelegation and @ned (steemit founder) also received a fair share of the reward.
+
+![](https://cdn.steemitimages.com/DQmTLjjyPF7sRLQtabPj12RQmBqQGZt8FDGUfep44ZK7JJN/image.png)<center><sub>Figure 2:  Post count distribution among different beneficiaries </sub></center>
+
+In terms of user engagement, [esteemapp](https://steemit.com/@esteemapp) gain  41.21% share for being popularly used by users in steem blockchain. It was followed by [steepshot](https://steemit.com/@steepshot) with 7.53% usage.  Popular Dapps  such as [Dtube](https://d.tube/) and [Dmania](https://dmania.lol/) also receive a good share of user engagement.
+
+Short content platforms such as  [esteemapp](https://steemit.com/@esteemapp), [steepshot](https://steemit.com/@steepshot), [zappl](https://steemit.com/@zappl) and [Dmania](https://dmania.lol/) are quite popular for most users in the platform. It has listed the most engagement among top beneficiaries. 
+
+Photography related apps and project also popular among users such as [steepshot](https://steemit.com/@steepshot) and [bescouted.com](https://www.bescouted.com/). In addition, contribution and rewarding platforms such as utopian and [steemhunt](https://steemhunt.com/) is also popular.
+
+### Benefactor Reward: Monthly Trends<br>
+
+<center>![](https://cdn.steemitimages.com/DQmPySD3WUrE14n9YurHtLRHcMGpdtZ3EMEtC8vT4XZYmdi/image.png)</center><center><sub>Figure 3:  Monthly number of beneficiaries receiving the rewards</sub></center>
+
+
+After benefactor rewards released in April 2017 ([hardfork18](https://github.com/steemit/steem/issues/773)), the number of benefactors was steadily increasing for the next 12 months. On average, there are 165,637 beneficiaries rewarded. A notable decline was observed from March 2018 until today. However, the number of beneficiaries is above the 165,637 average in July. 
+
+As stated earlier, majority of the beneficiaries are projects in steemit. The decline of beneficiaries may be attributed to projects that was already shutting down. In fact, [chainb](https://chainbb.com/) has announced shutdown 5 months ago.
+
+In reality, project owners and developers need to pay for the operating cost to maintain the project online including server fees. Withdrawing steem power (vests) needs at most 13 weeks to fully get the all withdrawn steem power (vest).  
+
+In addition, [hardfork20]([hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20)) is timely to correct the downtrend. Projects owners will be receiving **liquid steem** so that they can easily have funds to pay the operating cost. 
+
+<center>![](https://cdn.steemitimages.com/DQmeB2xFdQCBnGhwRhZcVzXqJfDwJcR2RtzYQk6ZtjBtLHW/image.png)<br><sub>Figure 4:  Monthly benefactor rewards generated</sub></center>
+
+On average, the monthly generated benefactor reward is 48,579,248.79 Vests. The highest generated benefactor reward was about 95,806,550.87 Vests. A notable decline only happen in May 2018. It recorded 62,494,712.42 Vests. However, the decline is still above the monthly average.
+
+ Overall, the plot shows an increasing amount of rewards generated. From the current numbers, it is expected to steadily increase in the coming months. A boost is also predicted as [hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20) is released.
+
+
+<center>![](https://cdn.steemitimages.com/DQmWX3UUUxTrv3NHMtLDFgzPdYZ8i5KtQ9fbTHDjiGpHHpi/image.png)</sub></center><center><sub>Figure 4:  Monthly post with beneficiaries (user engagement to projects) rewards generated</sub></center>
+
+The same with the other metrics. Post count shown a steady increased in the first 12 months. On average, there are  165,636.68 post per month.  A steady decrease observed  after March 2018. However, the number are still above the monthly average.
+
+In addition, the plot shows engagement of users to different projects in steemit. Each projects generates a good increasing numbers of engagement per month. It is projected to steadily increase for the coming months. However, we can not take for granted that there was a decrease in engagement. It may suggest lower retention of users into these projects.
+
+I am hoping the notable decrease in the engagement will be reverse by the implementation of [hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20). [Hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20) have interesting updates that I believe to make the current numbers turn around.
+
+### Looking for **"proof of growth"**
+
+From April to November 2017, a total of 145,606,905.2 Vests distributed to 554 beneficiaries. [Esteemapp](https://steemit.com/@esteemapp) received 25.26% of the rewards amounting to 36,787,416.08 vests. [Dtube](https://d.tube/) and [Chainbb](https://chainbb.com/) followed with 19.53% and 11.86% share of the reward.
+
+
+<center>![](https://cdn.steemitimages.com/DQmcKaz2gAcnKx6jHbFDxVARbwxvVZHFRg8Vyoz5sj7K89s/image.png)<sub>Figure 6:  Rewards shared by benefactor between April to November 2017</sub></center>
+
+
+In the first 8 months, pioneer projects in steemit received big chuck of the reward. However, there are fewer projects  as beneficiaries within the timestamp.  We can also note that majority of the beneficiaries at this time are delegators and project owners e.g. @ned, @misterdelegation, @elear etc. 
+
+On the other hand, from December 2017 to July 2018, [Dtube](https://d.tube/) gained the highest rewards at 37.53% share. It amounts to 23,7051,773.568934 Vests. The reward received by [Dtube](https://steemit.com/@dtube) increased by 644% from the earlier. 
+
+ [Esteemapp](https://steemit.com/@esteemapp) placed third among beneficiaries at 7.76% which amounts to 49,024,725.5949041 Vests. It ranks two step lower from the previous ranking. In terms of reward earned,  [esteemapp](https://steemit.com/@esteemapp) gained 144% from December 2017 to July 2018 as compared to April 2017 to November 2017.
+
+
+![](https://cdn.steemitimages.com/DQmVC16GgCAeBxATJuvdbxCEgwwML9nLH5GR3bRBVdaY1Nm/image.png)<center><sub>Figure 7:  Rewards shared by benefactor between December 2017 to July 2018</sub></center>
+
+We can acknowledge growth of majority of the Dapps. However, it is inevitable that there were no project that suffer lost in the platform. [Chainb](https://chainbb.com/) has the biggest lost among the Dapps in the platform. It ranks 39th on the received reward from it previous rank 3rd in rewards. Primarily, the drop is caused by its announcement of shutdown earlier this year. Its reward drops 224.74%.
+
+From December 2017 to July 2018, majority of the beneficiaries where projects in the platform. We can take note that the number of projects have tremendously increased over the last 8 months.  As a proof, there were more projects ranked with more benefactor rewards received than the earlier 8 months of benefactor rewards distribution. Sadly, there are some platforms that was not able to continue.
+
+<center>![](https://cdn.steemitimages.com/DQmbbybxnZA2vgERB8nTMaHHqJjK6EHSDrCUZLUtzeHhbL6/image.png)<br><sub>Figure 8:  Comparison for selected **Dapps** rewards between different timestamp</sub></center>
+
+We can see a tremendous growth in rewards for the popular dapps. As we can observe from the plot, majority of the selected dapps received more rewards between December 2017 to July 2018 as compared to April 2017 to November 2017. For example, [dtube](https://d.tube/) earned over 644% rewards as compared to the earlier stage of benefactor reward system in the platform.
+
+
+<center>![](https://cdn.steemitimages.com/DQmaAisbGys8xhumD2BfPC8NHHewBzV2mmY4Gi2JfQwE4VU/image.png)<br><sub>Figure 8:  Comparison for selected **Dapps** engagement between different timestamp</sub></center>
+
+Furthermore, we can observe more usage and engagement on dapps in the platform. For example, [esteemapp](https://steemit.com/@esteemapp) was widely used platform as it shares 35.53% of all post with beneficiaries. It is a good indication that dapps and other projects in the platform encourages user to engage more on the platform. Basically, majority of these projects rewards post and contribution.  
+
+Overall, a positive "proof of growth" was identified from the increase in the rewards and engagements on different projects in steemit.  There were platforms that have loss rewards and shutting down. However, there are more new projects coming in. Majority generates bigger benefactor rewards and engagement to these projects.
+
+As steemit moves forward with [hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20), I strongly believe it will turn around the decreasing trend in the lat 3 months. We can expect a better rewards for both the users and the benefactors as well. 
+
+## 4. Final Thoughts<hr>
+
+A total of 2,712 benefactors shares the benefactor reward pool amounting to 777,267,981 Vests. **Dapps** received majority of the benefactor rewards. [Dtube](https://steemit.com/@dtube), [utopian](https://steemit.com/@utopian.pay) and [esteemapp](https://steemit.com/@esteemapp) shares 60.71% of the total benefactor reward.
+
+In terms of engagement, short content platforms like [esteemapp](https://steemit.com/@esteemapp), [steepshot](https://steemit.com/@steepshot), [zappl](https://steemit.com/@zappl) and [Dmania](https://dmania.lol/) are popular with the users in the platform. It generates 64.87% of user postings with beneficiaries.
+
+A notable decline was observed in the last 3 months for both rewards and posting. However, in general, the plot suggest an increasing trend even with a decrease in the tail-end of the timestamp.   We can expect a turn around of the last  3-months down trend by the time [hardfork20](https://[hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20)) is implemented.
+
+As for the "proof of growth", I was able to point out that there was a steady growth of the platform. In comparison to the time where benefactor reward was first introduced in [hardfork18](https://github.com/steemit/steem/issues/773), we can take into account a big increase of both rewards and engagement generated through this projects in steemit.
+
+Lastly,  [hardfork20](https://[hardfork20](https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20)) will eventually raised the reward further which could also generate more engagement. The increasing trend observed today will eventually be sustained. 
+
+#### Proof of Work: [juecoree/Steemit-Analysis](https://github.com/juecoree/Steemit-Analysis/tree/master)
+
+ 
