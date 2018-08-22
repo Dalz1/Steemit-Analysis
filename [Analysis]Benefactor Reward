@@ -1,0 +1,41 @@
+## Methodology ( Tools and Query) <hr>
+
+I use [steemSQL wrapper](https://sql.steemhelpers.com/) to find out the data columns inside the **VOCommentBenefactorRewards** table from [steemSQL](www.steemsql.com). Having no experience with the **VOCommentBenefactorRewards** table, I initialize a query to look into data contents in each columns. 
+
+> <code>SELECT * FROM VOCommentBenefactorRewards(NOLOCK) WHERE VOCommentBenefactorRewards.timestamp >= '2018/07/01' AND VOCommentBenefactorRewards.timestamp < '2018/08/01'</code>
+
+<br>After observing the raw data, I found out that the reward is an **varchar** data type. This could not be used to create visuals and plots on benefactor reward trends. So, I created a new query which contains a convertion of  **varchar** to **float** data type for the rewards.
+
+><code>CONVERT(float,LEFT(VOCommentBenefactorRewards.reward,LEN(VOCommentBenefactorRewards.reward)-6))) AS [REWARD] </code>
+
+
+<br> A final query was used to tabulate the monthly distribution of benefactors, post count, and sum of rewards. The query is written below.
+
+> <code>SELECT	 
+YEAR(VOCommentBenefactorRewards.timestamp) AS [YEAR],
+MONTH(VOCommentBenefactorRewards.timestamp) AS [MONTH],	
+COUNT(VOCommentBenefactorRewards.benefactor) AS [BENEFACTOR],	
+COUNT(VOCommentBenefactorRewards.permlink) AS [POST],	
+SUM(CONVERT(float,LEFT(VOCommentBenefactorRewards.reward,LEN(VOCommentBenefactorRewards.reward)-6))) AS [REWARD]	
+FROM VOCommentBenefactorRewards(NOLOCK)	
+WHERE	
+VOCommentBenefactorRewards.timestamp >= '2017/04/01' AND
+VOCommentBenefactorRewards.timestamp < '2018/08/01'
+GROUP BY 
+YEAR(VOCommentBenefactorRewards.timestamp),
+MONTH(VOCommentBenefactorRewards.timestamp)</code>
+
+<br>To retrieve all the benefactors with each corresponding post count and reward sum, another query was used :
+
+> <code>SELECT	
+VOCommentBenefactorRewards.benefactor AS [BENEFACTOR],
+COUNT(VOCommentBenefactorRewards.permlink) AS [POST],	
+SUM(CONVERT(float,LEFT(VOCommentBenefactorRewards.reward,LEN(VOCommentBenefactorRewards.reward)-6))) AS [REWARD]	
+FROM VOCommentBenefactorRewards(NOLOCK)	
+WHERE	 
+VOCommentBenefactorRewards.timestamp >= '2017/04/01' AND
+VOCommentBenefactorRewards.timestamp < '2018/08/01'
+GROUP BY	
+VOCommentBenefactorRewards.benefactor</code>
+
+<br> After all the data were successfully gathered, visualization and plotting was done through Microsoft Excel.
